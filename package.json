@@ -1,0 +1,40 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Фронтенд сервиса бронирования авиабилетов (учебный проект Хекслета)",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "start": "frontend-flight-booking-server start -s dist",
+    "api": "frontend-flight-booking-server start",
+    "mock": "npx --yes @stoplight/prism-cli mock contract/openapi.yaml",
+    "test": "playwright test",
+    "typecheck": "tsc -b",
+    "lint": "oxlint && oxfmt --ignore-path=.oxfmtignore --check",
+    "lint:fix": "oxfmt --ignore-path=.oxfmtignore && oxlint --fix"
+  },
+  "dependencies": {
+    "@hexlet/frontend-flight-booking-server": "^0.4.0",
+    "@sentry/react": "^11.9.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router": "^7.18.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.19.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "oxfmt": "0.63.0",
+    "oxlint": "1.78.0",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.5"
+  }
+}
